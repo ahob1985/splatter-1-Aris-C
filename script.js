@@ -1,15 +1,35 @@
-// Author:
+// Author: Aris C
 
 // Global UI Variables
-//let canvasDiv;
+let canvasDiv;
+let canvas;
+let buttonDiv;
+let clearButton;
+let sliderDiv;
+let slider;
+let minSpan;
+let maxSpan;
+// create canvas UI
+
 
 function setup() {
+  
+
   // create canvas UI
-
+  canvasDiv = createDiv();
+  canvas = createCanvas(640, 480);
+  background(65, 60, 177);
+  canvas.mousePressed(drawEllipse);
+  canvas.parent(canvasDiv);
   // create slider UI
-
+ 
   // create button UI
-
+   buttonDiv = createDiv();
+   clearButton = createButton("Clear Canvas");
+   clearButton.mousePressed(function() {
+     background(65, 60, 177);
+    });
+    
 }
 
 function draw() {
@@ -17,7 +37,8 @@ function draw() {
 }
 
 function drawEllipse() {
-
+  fill("red");
+  ellipse(mouseX, mouseY, 100);
 }
 
 
